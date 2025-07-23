@@ -1,0 +1,13 @@
+﻿@using WebApplication9.Data.Entities
+@using WebApplication9.Services
+
+@inject IStudentService studentService
+
+<ol>
+    @foreach (Student student in studentService.GetStudents())
+    {
+        <li>
+            @student.GetFullName() (@student.Email)
+        </li>
+    }
+</ol>
