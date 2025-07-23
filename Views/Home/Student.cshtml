@@ -1,0 +1,27 @@
+﻿@using WebApplication9.Data.Entities
+
+@model Student
+
+<h1>Информация о студенте</h1>
+<hr />
+
+<p>
+    <b>Идентификатор</b>: @Model.Id
+    <br />
+    <b>Имя</b>: @Model.FirstName
+    <br />
+    <b>Фамилия</b>: @Model.LastName
+    <br />
+    <b>Адрес электронной почты</b>: @Model.Email
+    <br />
+    <b>Дата и время создания</b>: @Model.CreatedAt
+</p>
+
+<hr />
+<ul>
+    <li>
+        <a asp-controller="Home" asp-action="DeleteStudent" asp-route-id="@Model.Id">
+            Удалить данные студента
+        </a>
+    </li>
+</ul>

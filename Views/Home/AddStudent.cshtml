@@ -1,0 +1,31 @@
+﻿@model StudentDTO
+
+<h1>Новый студент</h1>
+<hr />
+
+<form asp-controller="Home" asp-action="CreateStudent" method="post">
+    <label asp-for="FirstName">Имя студента:</label>
+    <br />
+    <input asp-for="FirstName" />
+    <br />
+    <span asp-validation-for="FirstName"></span>
+
+    <br />
+
+    <label asp-for="LastName">Фамилия студента:</label>
+    <br />
+    <input asp-for="LastName" />
+    <br />
+    <span asp-validation-for="LastName"></span>
+
+    <br />
+
+    <label asp-for="Email">Адрес электронной почты студента:</label>
+    <br />
+    <input asp-for="Email" />
+    <br />
+    <span asp-validation-for="Email"></span>
+
+    <hr />
+    <button type="submit">Добавить</button>
+</form>

@@ -7,7 +7,7 @@ namespace WebApplication9.Data.Entities
     public class Student
     {
         [Column("id")]
-        public required int Id { get; set; }
+        public int Id { get; set; }
 
         [Column("first_name")]
         [MaxLength(64)]
@@ -21,7 +21,7 @@ namespace WebApplication9.Data.Entities
         public required string Email { get; set; }
 
         [Column("created_at")]
-        public required DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         public string GetFullName()
         {

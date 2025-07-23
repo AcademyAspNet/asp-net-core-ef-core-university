@@ -1,13 +1,18 @@
-﻿@using WebApplication9.Data.Entities
-@using WebApplication9.Services
+﻿@inject IStudentService studentService
 
-@inject IStudentService studentService
+<h1>Список студентов</h1>
+<hr />
+
+<a asp-controller="Home" asp-action="NewStudent">Добавить нового студента</a>
+<hr />
 
 <ol>
     @foreach (Student student in studentService.GetStudents())
     {
         <li>
-            @student.GetFullName() (@student.Email)
+            <a asp-controller="Home" asp-action="Student" asp-route-id="@student.Id">
+                @student.GetFullName() (@student.Email)
+            </a>
         </li>
     }
 </ol>
